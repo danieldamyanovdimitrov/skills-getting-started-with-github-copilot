@@ -19,7 +19,7 @@ def client():
     return TestClient(app)
 
 
-def test_get_activities_includes_added_examples(client):
+def test_get_activities_returns_at_least_four_activities(client):
     response = client.get("/activities")
 
     assert response.status_code == 200
